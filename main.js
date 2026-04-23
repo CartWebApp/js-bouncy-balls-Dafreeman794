@@ -19,10 +19,9 @@ function Elic(x, y, velX, velY, color, size) {
   this.y = y;
   this.velX = velX;
   this.velY = velY;
-  this.color = color;
   this.size = size;
   this.image = new Image();
-  this.image.src = 'image/floating Elic.png';  // Path to your image
+  this.image.src = 'image/floating Elic.png';
 }
 
 
