@@ -14,7 +14,7 @@ function random(min, max) {
   return num;
 }
 
-function Elic(x, y, velX, velY, color, size) {
+function Elic(x, y, velX, velY, size) {
   this.x = x;
   this.y = y;
   this.velX = velX;
@@ -63,7 +63,6 @@ while (elics.length < 25) {
     random(0 + size, height - size),
     random(-7,7),
     random(-7,7),
-    'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) + ')', 
     size
   );
 
@@ -76,10 +75,6 @@ Elic.prototype.collisionDetect = function() {
       const dx = this.x - elics[j].x;
       const dy = this.y - elics[j].y;
       const distance = Math.sqrt(dx * dx + dy * dy);
-      
-      if (distance < this.size + elics[j].size) {
-        elics[j].color = this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) + ')';
-      }
     }
   }
 }
